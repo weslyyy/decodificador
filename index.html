@@ -4,30 +4,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/icon.jpg">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');</style>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <title>Decodificador</title>
     </head>
     <body>
         <main>
-            <div class="icon-alura">
+            <header>
                 <img src="img/icon.jpg" alt="Ícone do decodificador Alura">
-            </div>
+            </header>
             <section class="type-section">
                 <fieldset>
                     <div class="textarea-div">
-                        <textarea name="" class="">Digite seu texto</textarea>
+                        <textarea placeholder="Digite seu texto:" name="" class="send-text-area"></textarea>
                     </div>
                     <div class="buttons-div">
                        <div>
                         <p>
                             &#9888; Apenas letras minúsculas e sem acento.
                         </p>
-                        <button type="submit">
+                        <button type="button" class="encrypt-button" onclick="encryptButton()">
                             Criptografar
                         </button>
                        </div>
-                        <button type="submit">
+                        <button type="button" class="decrypt-button" onclick="decryptButton()">
                             Descriptografar
                         </button>
                     </div>
@@ -36,7 +37,9 @@
             </section>
             <section class="result-section">
                 <div class="result-container">
-                    <div class="searching-image-box">
+                    <textarea class="show-text-area" ></textarea>
+                    <button type="button" class="copy-button" onclick="copy()">Copiar</button>
+                    <div class="searching-image-box"> 
                         <img src="img/searching.gif" alt="Procurando">
                     </div>
                     <div class="alert-box">
@@ -50,5 +53,6 @@
                 </div>
             </section>
         </main>
+        <script src="js/script.js"></script>
     </body>
 </html>
